@@ -1,0 +1,94 @@
+#welcome{
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  padding: 50px 10px;
+  @include flex;
+
+  .container{
+    z-index: 1;
+  }
+
+  a{
+    font-weight: 900;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    transition: color .3s ease-in-out, font-size .5s ease;
+    color:white;
+    animation: appear 1.5s ease-in;
+    font-size: 2rem;
+    word-break: keep-all;
+  }
+
+  a:hover{
+    color:black;
+  }
+
+  a:after{
+    content: ' / ';
+    font-weight:100;
+    color:white;
+  }
+
+  a:last-of-type:after{
+    content: '';
+  }
+}
+
+.backgroundContainer{
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background-color: $orange;
+  overflow: hidden;
+}
+
+.letter{
+  font-size: 0rem;
+  font-weight: 900;
+  font-family: 'Opoen Sans', sans-serif;
+  position: absolute;
+  transition: all 2.5s ease-in-out;
+  mix-blend-mode: difference;
+}
+
+.squiggle{
+  mix-blend-mode: multiply;
+  width: 25%;
+  transition: width .5s ease-in-out;
+  opacity: .3;
+}
+
+
+
+
+
+
+/////////////////////////
+@media (min-width:767px) {
+  #welcome{
+    padding:100px 20px;
+
+    a{
+      font-size: 4rem;
+    }
+  }
+
+  .squiggle{
+    width: 15%;
+  }
+}
+
+@media (min-width:1200px) {
+  #welcome{
+    a{
+      font-size: 6rem;
+    }
+  }
+
+  .squiggle{
+    width: 10%;
+  }
+}

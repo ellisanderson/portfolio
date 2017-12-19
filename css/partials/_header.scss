@@ -1,0 +1,128 @@
+header{
+  width:100%;
+  position:fixed;
+  z-index:2;
+  top: 0;
+  left: 0;
+  height: 50px;
+  animation: slide-right 3s ease;
+}
+
+
+.logo{
+  position:absolute;
+  left:10px;
+  top:10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg{
+    height: 30px;
+    width: 30px;
+    fill:black;
+    transition: fill .3s ease-in-out;
+  }
+
+  svg:hover{
+    fill:white;
+  }
+}
+
+
+.name{
+  position: absolute;
+  width: 300px;
+  height: 30px;
+  top:10px;
+  left:calc(50% - 150px);
+  text-align: center;
+  font-weight:900;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  display: none;
+}
+
+
+.trigger{
+  position:absolute;
+  text-transform:uppercase;
+  right:5px;
+  top:5px;
+  color:black;
+  cursor:pointer;
+  font-weight:900;
+  letter-spacing: .2rem;
+  height: 30px;
+  padding-top:5px;
+  display: none;
+}
+
+.ham-trigger{
+  position: absolute;
+  right:10px;
+  top:10px;
+  cursor: pointer;
+  font-size: 30px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding-top: 8px;
+}
+
+.ham-line{
+  width: 30px;
+  border-top: 2px solid black;
+  margin-bottom: 5px;
+}
+
+.underline{
+  margin-top:5px;
+  height:2px;
+  width:0%;
+  background-color:black;
+  transition: width .2s ease-in-out;
+}
+
+.trigger:hover > .underline{
+  width: 100%;
+}
+
+
+
+
+
+
+//////////////////////////////////////////////////////////
+
+@media (min-width:767px) {
+  header{
+    top: 0;
+    background-color: transparent;
+  }
+
+  .name{
+    @include flex;
+    top:25px;
+  }
+
+  .trigger{
+    display: block;
+    top:25px;
+    right:25px;
+  }
+
+  .ham-trigger{
+    display: none;
+  }
+
+  .logo{
+    top:25px;
+    left:25px;
+
+    .up{
+      fill:black;
+    }
+  }
+
+}
