@@ -128,9 +128,6 @@ header {
     -webkit-transform: translateX(-50%) translateY(-50%) rotate(135deg);
     transform: translateX(-50%) translateY(-50%) rotate(135deg); }
 
-.nav-close:hover {
-  transform: rotate(180deg); }
-
 nav {
   width: 100%;
   height: 100vh;
@@ -147,7 +144,7 @@ nav {
   .main-nav a {
     text-transform: uppercase;
     font-family: 'Open Sans', sans-serif;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 900;
     transition: all .3s ease-in-out; }
   .main-nav a:hover {
@@ -206,6 +203,11 @@ a {
     transform: rotate(180deg); }
   100% {
     transform: rotate(360deg); } }
+@keyframes letterdrift {
+  0% {
+    line-height: 0%; }
+  100% {
+    line-height: 100%; } }
 #welcome {
   height: 100vh;
   width: 100%;
@@ -250,13 +252,30 @@ a {
   font-family: 'Opoen Sans', sans-serif;
   position: absolute;
   transition: all 2.5s ease-in-out;
-  mix-blend-mode: difference; }
+  mix-blend-mode: difference;
+  animation: letterdrift 3s infinite alternate ease-in-out; }
 
-.squiggle {
-  mix-blend-mode: multiply;
-  width: 25%;
-  transition: width .5s ease-in-out;
-  opacity: .3; }
+#shuffle-button {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 1;
+  border: none;
+  color: white;
+  background-color: black;
+  outline: none;
+  padding: 10px 15px;
+  font-family: inherit;
+  font-size: .8rem;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  border-radius: 0px;
+  cursor: pointer;
+  transition: background-color .3s ease-in-out;
+  animation: appear 1.5s linear; }
+
+#shuffle-button:hover {
+  background-color: #0073B6; }
 
 @media (min-width: 767px) {
   #welcome {
@@ -264,13 +283,11 @@ a {
     #welcome a {
       font-size: 4rem; }
 
-  .squiggle {
-    width: 15%; } }
+  #shuffle-button {
+    bottom: 30px;
+    right: 30px; } }
 @media (min-width: 1200px) {
   #welcome a {
-    font-size: 6rem; }
-
-  .squiggle {
-    width: 10%; } }
+    font-size: 6rem; } }
 
 /*# sourceMappingURL=styles.css.map */

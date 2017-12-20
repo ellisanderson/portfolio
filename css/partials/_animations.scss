@@ -52,3 +52,13 @@
     transform: rotate(360deg);
   }
 }
+
+@keyframes letterdrift {
+  0%{
+    line-height: 0%;
+  }
+
+  100%{
+    line-height: 100%;
+  }
+}

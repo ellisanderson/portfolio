@@ -34,9 +34,9 @@
   }
 }
 
-.nav-close:hover{
-  transform: rotate(180deg);
-}
+// .nav-close:hover{
+//   transform: rotate(180deg);
+// }
 
 nav{
   width:100%;
@@ -56,7 +56,7 @@ nav{
   a{
     text-transform: uppercase;
     font-family: 'Open Sans', sans-serif;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 900;
     transition: all .3s ease-in-out;
   }

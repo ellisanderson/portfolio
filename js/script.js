@@ -78,4 +78,8 @@ $(document).ready(function(){
     randomLetters();
   };
 
+  $('#shuffle-button').click(function(){
+    randomLetters();
+  });
+
 });
